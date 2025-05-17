@@ -19,7 +19,7 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   users.users.dennis = {
-    hashedPassword = "$6$Nts6LgRgMWCIqxTt$2pRj2sP4DxGSI0D7Y9V097YKGSsJ.CxWAKeqd9YVSTJSJhWmXGpH9egIJvr6URm5CAaiq30h4s57/dqxysYFI0";
+    hashedPassword = ''$6$Nts6LgRgMWCIqxTt$2pRj2sP4DxGSI0D7Y9V097YKGSsJ.CxWAKeqd9YVSTJSJhWmXGpH9egIJvr6URm5CAaiq30h4s57/dqxysYFI0'';
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
     shell = pkgs.zsh;
