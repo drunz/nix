@@ -1,9 +1,9 @@
 
 { config, pkgs, ... }: {
-  home.username = "yourusername";
-  home.homeDirectory = "/home/yourusername";
+  home.username = "dennis";
+  home.homeDirectory = "/home/dennis";
 
-  home.stateVersion = "23.11";
+  home.stateVersion = "25.05";
 
   programs.home-manager.enable = true;
 
@@ -25,11 +25,12 @@
     wl-clipboard
     nwg-look
     swayidle
-    thunar
+    xfce.thunar
     yazi
     firefox
     neovim
     git
+    vim
     jetbrains-mono
     colloid-icon-theme
     numix-icon-theme-circle

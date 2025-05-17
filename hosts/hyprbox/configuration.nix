@@ -6,8 +6,11 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
+# boot.loader.systemd-boot.enable = true;
+# boot.loader.efi.canTouchEfiVariables = true;
+
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/sda";
 
   networking.hostName = "hyprbox";
   networking.networkmanager.enable = true;
@@ -15,7 +18,7 @@
   time.timeZone = "UTC";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  users.users.yourusername = {
+  users.users.dennis = {
     isNormalUser = true;
     extraGroups = [ "wheel" "networkmanager" ];
     shell = pkgs.zsh;
@@ -29,11 +32,11 @@
 
   fonts.packages = with pkgs; [
     jetbrains-mono
-    (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
+#    (pkgs.nerdfonts.override { fonts = [ "JetBrainsMono" ]; })
     noto-fonts
     noto-fonts-emoji
   ];
 
   security.pam.services.hyprlock = {};
-  system.stateVersion = "23.11";
+  system.stateVersion = "25.05";
 }
