@@ -43,22 +43,12 @@
 
 ## 🚀 Usage
 
-1. Extract this repo:
+1. Clone the repo:
    ```bash
-   unzip hyprland-nixos-flake.zip -d hyprland-config
-   cd hyprland-config
+   git clone git@github.com:drunz/nix.git
    ```
 
-2. Init Git and push:
-   ```bash
-   git init
-   git remote add origin <your-repo-url>
-   git add .
-   git commit -m "Initial commit"
-   git push -u origin main
-   ```
-
-3. Build system:
+2. Build system:
    ```bash
    sudo nixos-rebuild switch --flake .#hyprbox
    ```
